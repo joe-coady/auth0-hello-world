@@ -18,7 +18,7 @@ app.get('/users', async (req, res) => {
         res.json(users);
     } catch (err) {
         console.error(err);
-        res.status(500).send('Something went wrong');
+        res.status(500).send(`Something went wrong ${err}`);
     }
 });
 
